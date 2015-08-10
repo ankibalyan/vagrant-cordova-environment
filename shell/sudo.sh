@@ -4,6 +4,8 @@ sudo apt-get -y install openjdk-7-jdk
 sudo apt-get -y install openjdk-7-jre 
 
 apt-get install -y npm git ant expect
-npm install -g n
-n stable
-apt-get update
+
+sudo apt-add-repository ppa:cordova-ubuntu/ppa
+sudo apt-get install cordova-cli
+
+apt-get update apt-get install -f
