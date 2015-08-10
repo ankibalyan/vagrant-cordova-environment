@@ -16,7 +16,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.network "forwarded_port", guest: 3000, host: 3000
 
 	# Shared folder
-	config.vm.synced_folder "android-sdk-linux/", "/usr/bin/android-sdk-linux", create: true   
+	config.vm.synced_folder "/opt/android-sdk-linux/", "/opt/android-sdk-linux", create: true   
 	config.vm.synced_folder "./data", "/vagrant_data", create: true
+
+	# shell
+	config.vm.provision "shell", path: "shell/sudo.sh"
+	config.vm.provision "shell", path: "shell/android.sh"
+	config.vm.provision "shell", path: "shell/npm.sh"
 
 end
