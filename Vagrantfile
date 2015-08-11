@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 	# Box
-	config.vm.box = "hashicorp/trusty32"
+	config.vm.box = "ubuntu/trusty32"
 	
 	#IP
 	config.vm.network "private_network", ip: "192.168.11.100"
